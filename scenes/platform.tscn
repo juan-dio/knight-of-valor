@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bodxidy51mw1d"]
+
+[ext_resource type="Texture2D" uid="uid://dg645i4wpm0mu" path="res://assets/sprites/tileset1.png" id="1_ndcvd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ak2ib"]
+size = Vector2(48, 18)
+
+[node name="Platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ndcvd")
+region_enabled = true
+region_rect = Rect2(15.9964, 11.9625, 47.9028, 19.9319)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_ak2ib")

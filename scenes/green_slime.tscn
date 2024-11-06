@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://dwg4qnrc1wr0"]
+
+[ext_resource type="Texture2D" uid="uid://dg645i4wpm0mu" path="res://assets/sprites/tileset1.png" id="1_kswfk"]
+[ext_resource type="Script" path="res://scripts/slime.gd" id="1_lofeu"]
+[ext_resource type="PackedScene" uid="uid://cy381c2g32142" path="res://scenes/killzone.tscn" id="2_wef5y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ih3jf"]
+atlas = ExtResource("1_kswfk")
+region = Rect2(432, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nf10"]
+atlas = ExtResource("1_kswfk")
+region = Rect2(448, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4bh1"]
+atlas = ExtResource("1_kswfk")
+region = Rect2(464, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5fdc"]
+atlas = ExtResource("1_kswfk")
+region = Rect2(480, 112, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_at8cj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ih3jf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nf10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4bh1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5fdc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wktyl"]
+size = Vector2(10, 13)
+
+[node name="Green_Slime" type="Node2D"]
+script = ExtResource("1_lofeu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_at8cj")
+autoplay = "default"
+frame_progress = 0.187628
+
+[node name="Killzone" parent="." instance=ExtResource("2_wef5y")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_wktyl")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(11, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-11, 0)
