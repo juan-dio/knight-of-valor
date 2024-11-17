@@ -13,4 +13,6 @@ func _on_timer_timeout() -> void:
 	var current_scene_file = get_tree().current_scene.scene_file_path
 	var next_level_number = current_scene_file.to_int() + 1
 	var next_level_path = FILE_BEGIN + str(next_level_number) + ".tscn"
+	Global.current_scene = next_level_path
+	Global.health = Global.max_health
 	get_tree().change_scene_to_file(next_level_path)

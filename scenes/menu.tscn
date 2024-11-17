@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://crsdyt1215vs7"]
+[gd_scene load_steps=19 format=4 uid="uid://crsdyt1215vs7"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_r5rju"]
 [ext_resource type="FontFile" uid="uid://bybfoqcmp56uc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_8vpuq"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://dbslkvb3cxdrj" path="res://assets/fonts/PixelOperator8.ttf" id="3_nuwc7"]
 [ext_resource type="Texture2D" uid="uid://dg645i4wpm0mu" path="res://assets/sprites/tileset1.png" id="4_knk7c"]
 [ext_resource type="Texture2D" uid="uid://de8loxbay7r1" path="res://assets/sprites/knight.png" id="5_6j7j1"]
+[ext_resource type="PackedScene" uid="uid://cnrrv6vbbgsgk" path="res://scenes/music_intro.tscn" id="7_ki7ce"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2utat"]
 texture = ExtResource("2_kdclb")
@@ -876,6 +877,8 @@ position = Vector2(397, 375)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_katuk")
 autoplay = "default"
+
+[node name="MusicIntro" parent="." instance=ExtResource("7_ki7ce")]
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

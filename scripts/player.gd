@@ -5,6 +5,8 @@ const SPEED = 100.0
 const JUMP_VELOCITY = -300.0
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var hit_flash_animation_player: AnimationPlayer = $HitFlashAnimationPlayer
+@onready var hit: AudioStreamPlayer2D = $Hit
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -25,17 +27,13 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.flip_h = true
 		
 	# Play animations
-	if Global.is_alive:
-		if is_on_floor():
-			if direction == 0:
-				animated_sprite_2d.play("idle")
-			else:
-				animated_sprite_2d.play("run")
+	if is_on_floor():
+		if direction == 0:
+			animated_sprite_2d.play("idle")
 		else:
-			animated_sprite_2d.play("jump")
+			animated_sprite_2d.play("run")
 	else:
-		animated_sprite_2d.play("death")
-		
+		animated_sprite_2d.play("jump")
 	
 	# Apply movement
 	if direction:
@@ -44,3 +42,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func play_hit_animation():
+	hit_flash_animation_player.play("hit_flash")
+	
+func play_attack():
+	hit.play()
+	velocity.y = -200
