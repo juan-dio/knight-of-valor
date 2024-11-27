@@ -1,9 +1,11 @@
 extends Area2D
 
 @onready var timer: Timer = $Timer
+@onready var fall_sound: AudioStreamPlayer2D = $FallSound
 
 func _on_body_entered(body: Node2D) -> void:
 	Global.health -= 1
+	fall_sound.play()
 	Engine.time_scale = 0.5
 	timer.start()
 

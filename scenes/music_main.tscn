@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cn31bqbootpig"]
-
-[ext_resource type="AudioStream" uid="uid://cgw083ivsifx5" path="res://assets/music/Sun_Tribe.ogg" id="1_65f7k"]
-
-[node name="MusicMain" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_65f7k")
-autoplay = true
-bus = &"Music"

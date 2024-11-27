@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnrrv6vbbgsgk"]
+
+[ext_resource type="AudioStream" uid="uid://bplnriugxgsvx" path="res://assets/music/music_menu.ogg" id="1_vv3gy"]
+
+[node name="MusicMenu" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_vv3gy")
+autoplay = true
+bus = &"Music"

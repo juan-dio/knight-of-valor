@@ -1,10 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://gu1qqib25pbu"]
+[gd_scene load_steps=6 format=3 uid="uid://gu1qqib25pbu"]
 
 [ext_resource type="Script" path="res://scripts/next_level.gd" id="1_d7i5y"]
+[ext_resource type="Texture2D" uid="uid://dg645i4wpm0mu" path="res://assets/sprites/tileset1.png" id="2_86ikg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03jl4"]
+atlas = ExtResource("2_86ikg")
+region = Rect2(32, 238, 32, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rp5i8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03jl4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r7663"]
+size = Vector2(6, 24)
 
 [node name="NextLevel" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_d7i5y")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rp5i8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_r7663")
+
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.75
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

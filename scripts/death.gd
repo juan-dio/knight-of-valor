@@ -5,7 +5,6 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Global.is_alive = true
 	Global.health = Global.max_health
 	Global.score = 0
 

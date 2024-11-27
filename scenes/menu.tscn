@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://crsdyt1215vs7"]
+[gd_scene load_steps=24 format=4 uid="uid://crsdyt1215vs7"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_r5rju"]
 [ext_resource type="FontFile" uid="uid://bybfoqcmp56uc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_8vpuq"]
@@ -6,7 +6,8 @@
 [ext_resource type="FontFile" uid="uid://dbslkvb3cxdrj" path="res://assets/fonts/PixelOperator8.ttf" id="3_nuwc7"]
 [ext_resource type="Texture2D" uid="uid://dg645i4wpm0mu" path="res://assets/sprites/tileset1.png" id="4_knk7c"]
 [ext_resource type="Texture2D" uid="uid://de8loxbay7r1" path="res://assets/sprites/knight.png" id="5_6j7j1"]
-[ext_resource type="PackedScene" uid="uid://cnrrv6vbbgsgk" path="res://scenes/music_intro.tscn" id="7_ki7ce"]
+[ext_resource type="PackedScene" uid="uid://cnrrv6vbbgsgk" path="res://scenes/music_menu.tscn" id="7_ki7ce"]
+[ext_resource type="AudioStream" uid="uid://bplnriugxgsvx" path="res://assets/music/music_menu.ogg" id="8_y7vcp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2utat"]
 texture = ExtResource("2_kdclb")
@@ -112,7 +113,7 @@ sources/0 = SubResource("TileSetAtlasSource_2utat")
 [sub_resource type="LabelSettings" id="LabelSettings_7wvwi"]
 font = ExtResource("2_8vpuq")
 font_size = 56
-font_color = Color(0.517647, 0.494118, 0.529412, 1)
+font_color = Color(0.992157, 0.968627, 0.929412, 1)
 outline_size = 16
 outline_color = Color(0, 0, 0, 1)
 
@@ -765,6 +766,22 @@ texture = ExtResource("4_knk7c")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_tdmiw")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpri6"]
+atlas = ExtResource("4_knk7c")
+region = Rect2(128, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_np1x1"]
+atlas = ExtResource("4_knk7c")
+region = Rect2(144, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h13gb"]
+atlas = ExtResource("4_knk7c")
+region = Rect2(160, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5gcd"]
+atlas = ExtResource("4_knk7c")
+region = Rect2(176, 96, 16, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_vggpu"]
 atlas = ExtResource("5_6j7j1")
 region = Rect2(0, 0, 64, 64)
@@ -789,6 +806,23 @@ region = Rect2(256, 0, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_wpri6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_np1x1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h13gb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5gcd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_vggpu")
 }, {
 "duration": 1.0,
@@ -804,7 +838,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_n54dh")
 }],
 "loop": true,
-"name": &"default",
+"name": &"default1",
 "speed": 8.0
 }]
 
@@ -878,7 +912,9 @@ scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_katuk")
 autoplay = "default"
 
-[node name="MusicIntro" parent="." instance=ExtResource("7_ki7ce")]
+[node name="MusicMenu" parent="." instance=ExtResource("7_ki7ce")]
+stream = ExtResource("8_y7vcp")
+bus = &"Master"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
