@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://djn7bkakthft2"]
+[gd_scene load_steps=9 format=4 uid="uid://djn7bkakthft2"]
 
 [ext_resource type="Texture2D" uid="uid://btfuycq8lr7sm" path="res://assets/sprites/bg.png" id="1_02n61"]
 [ext_resource type="Script" path="res://scripts/death.gd" id="1_i017n"]
 [ext_resource type="FontFile" uid="uid://bybfoqcmp56uc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_kedm3"]
 [ext_resource type="FontFile" uid="uid://dbslkvb3cxdrj" path="res://assets/fonts/PixelOperator8.ttf" id="3_fg42r"]
+[ext_resource type="PackedScene" uid="uid://cnrrv6vbbgsgk" path="res://scenes/music_menu.tscn" id="5_em1n8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4gymq"]
 texture = ExtResource("1_02n61")
@@ -168,6 +169,8 @@ size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("3_fg42r")
 theme_override_font_sizes/font_size = 24
 text = "Exit"
+
+[node name="MusicMenu" parent="." instance=ExtResource("5_em1n8")]
 
 [connection signal="pressed" from="VBoxContainer/TryAgainButton" to="." method="_on_try_again_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

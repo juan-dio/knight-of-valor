@@ -1183,4 +1183,3 @@ z_index = 1
 position = Vector2(2223, -226)
 
 [node name="MusicLevel1" parent="." instance=ExtResource("11_0htha")]
-bus = &"Master"
