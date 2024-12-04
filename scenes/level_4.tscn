@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://4ilf7yvkwqg1"]
+[gd_scene load_steps=37 format=4 uid="uid://4ilf7yvkwqg1"]
 
 [ext_resource type="PackedScene" uid="uid://bcynflyjeq5r1" path="res://scenes/hud.tscn" id="1_htskf"]
 [ext_resource type="Texture2D" uid="uid://btfuycq8lr7sm" path="res://assets/sprites/bg.png" id="2_sdaim"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://f2aguu4k6agx" path="res://scenes/ghost_lattern.tscn" id="10_ley1g"]
 [ext_resource type="PackedScene" uid="uid://gtetdwku2qbo" path="res://scenes/ghost_reaper.tscn" id="11_1fdbp"]
 [ext_resource type="PackedScene" uid="uid://df2vu7olmfoud" path="res://scenes/ghost_king.tscn" id="12_texb5"]
+[ext_resource type="FontFile" uid="uid://bybfoqcmp56uc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="13_3m0nx"]
 [ext_resource type="PackedScene" uid="uid://gu1qqib25pbu" path="res://scenes/next_level.tscn" id="13_fqqe6"]
 [ext_resource type="PackedScene" uid="uid://bw41ijche75o" path="res://scenes/music_level3.tscn" id="14_eq5hj"]
 
@@ -1010,6 +1011,21 @@ sources/1 = SubResource("TileSetAtlasSource_s7emr")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k3ey6"]
 
+[sub_resource type="Animation" id="Animation_0btto"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(18, -90)]
+}
+
 [sub_resource type="Animation" id="Animation_mvnoj"]
 resource_name = "move"
 length = 2.5
@@ -1027,7 +1043,13 @@ tracks/0/keys = {
 "values": [Vector2(18, -90), Vector2(256, -90)]
 }
 
-[sub_resource type="Animation" id="Animation_0btto"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a8yc4"]
+_data = {
+"RESET": SubResource("Animation_0btto"),
+"move": SubResource("Animation_mvnoj")
+}
+
+[sub_resource type="Animation" id="Animation_rbeud"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1039,13 +1061,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(18, -90)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_a8yc4"]
-_data = {
-"RESET": SubResource("Animation_0btto"),
-"move": SubResource("Animation_mvnoj")
+"values": [Vector2(1075, -58)]
 }
 
 [sub_resource type="Animation" id="Animation_i6nd0"]
@@ -1064,7 +1080,13 @@ tracks/0/keys = {
 "values": [Vector2(1075, -58), Vector2(1075, -153)]
 }
 
-[sub_resource type="Animation" id="Animation_rbeud"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7j3ru"]
+_data = {
+"RESET": SubResource("Animation_rbeud"),
+"move": SubResource("Animation_i6nd0")
+}
+
+[sub_resource type="Animation" id="Animation_r2v3w"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1076,13 +1098,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1075, -58)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_7j3ru"]
-_data = {
-"RESET": SubResource("Animation_rbeud"),
-"move": SubResource("Animation_i6nd0")
+"values": [Vector2(1244, -250)]
 }
 
 [sub_resource type="Animation" id="Animation_pcm7e"]
@@ -1102,7 +1118,13 @@ tracks/0/keys = {
 "values": [Vector2(1244, -250), Vector2(1244, -138)]
 }
 
-[sub_resource type="Animation" id="Animation_r2v3w"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5tm33"]
+_data = {
+"RESET": SubResource("Animation_r2v3w"),
+"move": SubResource("Animation_pcm7e")
+}
+
+[sub_resource type="Animation" id="Animation_vu6cn"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1114,13 +1136,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1244, -250)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_5tm33"]
-_data = {
-"RESET": SubResource("Animation_r2v3w"),
-"move": SubResource("Animation_pcm7e")
+"values": [Vector2(2033, -75)]
 }
 
 [sub_resource type="Animation" id="Animation_fkcyj"]
@@ -1139,26 +1155,16 @@ tracks/0/keys = {
 "values": [Vector2(2033, -75), Vector2(2212, -75)]
 }
 
-[sub_resource type="Animation" id="Animation_vu6cn"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2033, -75)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h16df"]
 _data = {
 "RESET": SubResource("Animation_vu6cn"),
 "move": SubResource("Animation_fkcyj")
 }
+
+[sub_resource type="LabelSettings" id="LabelSettings_8rute"]
+font = ExtResource("13_3m0nx")
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Level_4" type="Node2D"]
 
@@ -1417,6 +1423,18 @@ position = Vector2(2464, -177)
 
 [node name="Ghost_King5" parent="Enemies" instance=ExtResource("12_texb5")]
 position = Vector2(2345, -82)
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="LevelLabel" type="Label" parent="Labels"]
+z_index = 1
+offset_left = -180.0
+offset_top = -182.0
+offset_right = -76.0
+offset_bottom = -159.0
+text = "Level 4"
+label_settings = SubResource("LabelSettings_8rute")
+uppercase = true
 
 [node name="NextLevel" parent="." instance=ExtResource("13_fqqe6")]
 z_index = 1

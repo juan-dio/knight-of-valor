@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://bhha6vlepuqcr"]
+[gd_scene load_steps=31 format=4 uid="uid://bhha6vlepuqcr"]
 
 [ext_resource type="PackedScene" uid="uid://bcynflyjeq5r1" path="res://scenes/hud.tscn" id="1_6ctkl"]
 [ext_resource type="Texture2D" uid="uid://btfuycq8lr7sm" path="res://assets/sprites/bg.png" id="2_1aksc"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dwg874p7fjujs" path="res://scenes/zombie_blue.tscn" id="10_xb1w4"]
 [ext_resource type="PackedScene" uid="uid://gu1qqib25pbu" path="res://scenes/next_level.tscn" id="11_r42sq"]
 [ext_resource type="PackedScene" uid="uid://cn31bqbootpig" path="res://scenes/music_level1.tscn" id="11_s8ma2"]
+[ext_resource type="FontFile" uid="uid://bybfoqcmp56uc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="13_6yijk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wfykn"]
 texture = ExtResource("2_1aksc")
@@ -897,23 +898,6 @@ sources/1 = SubResource("TileSetAtlasSource_s7emr")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k3ey6"]
 
-[sub_resource type="Animation" id="Animation_mkyue"]
-resource_name = "move"
-length = 3.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(287, -73), Vector2(578, -73)]
-}
-
 [sub_resource type="Animation" id="Animation_0afl5"]
 length = 0.001
 tracks/0/type = "value"
@@ -929,10 +913,80 @@ tracks/0/keys = {
 "values": [Vector2(287, -73)]
 }
 
+[sub_resource type="Animation" id="Animation_mkyue"]
+resource_name = "move"
+length = 3.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(287, -73), Vector2(578, -73)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6ne6b"]
 _data = {
 "RESET": SubResource("Animation_0afl5"),
 "move": SubResource("Animation_mkyue")
+}
+
+[sub_resource type="Animation" id="Animation_cxl6x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-67, -74)]
+}
+
+[sub_resource type="Animation" id="Animation_tcb8l"]
+resource_name = "move"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-67, -74), Vector2(20, -74)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0wl0i"]
+_data = {
+"RESET": SubResource("Animation_cxl6x"),
+"move": SubResource("Animation_tcb8l")
+}
+
+[sub_resource type="Animation" id="Animation_06a0k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(778, -297)]
 }
 
 [sub_resource type="Animation" id="Animation_8gekx"]
@@ -952,64 +1006,16 @@ tracks/0/keys = {
 "values": [Vector2(778, -297), Vector2(778, -442)]
 }
 
-[sub_resource type="Animation" id="Animation_06a0k"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(778, -297)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uri0q"]
 _data = {
 "RESET": SubResource("Animation_06a0k"),
 "move": SubResource("Animation_8gekx")
 }
 
-[sub_resource type="Animation" id="Animation_tcb8l"]
-resource_name = "move"
-length = 1.5
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-67, -74), Vector2(20, -74)]
-}
-
-[sub_resource type="Animation" id="Animation_cxl6x"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-67, -74)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0wl0i"]
-_data = {
-"RESET": SubResource("Animation_cxl6x"),
-"move": SubResource("Animation_tcb8l")
-}
+[sub_resource type="LabelSettings" id="LabelSettings_vmere"]
+font = ExtResource("13_6yijk")
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Level_2" type="Node2D"]
 
@@ -1062,16 +1068,6 @@ libraries = {
 }
 autoplay = "move"
 
-[node name="Platform3" parent="Platforms" instance=ExtResource("6_kjia4")]
-z_index = 1
-position = Vector2(778, -297)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform3"]
-libraries = {
-"": SubResource("AnimationLibrary_uri0q")
-}
-autoplay = "move"
-
 [node name="Platform2" parent="Platforms" instance=ExtResource("6_kjia4")]
 z_index = 1
 position = Vector2(-67, -74)
@@ -1079,6 +1075,16 @@ position = Vector2(-67, -74)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2"]
 libraries = {
 "": SubResource("AnimationLibrary_0wl0i")
+}
+autoplay = "move"
+
+[node name="Platform3" parent="Platforms" instance=ExtResource("6_kjia4")]
+z_index = 1
+position = Vector2(778, -297)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform3"]
+libraries = {
+"": SubResource("AnimationLibrary_uri0q")
 }
 autoplay = "move"
 
@@ -1115,7 +1121,7 @@ position = Vector2(120, -248)
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("8_bvm0j")]
-position = Vector2(-104, -91)
+position = Vector2(-112, -91)
 
 [node name="Coin4" parent="Coins" instance=ExtResource("8_bvm0j")]
 position = Vector2(82, -216)
@@ -1182,9 +1188,6 @@ position = Vector2(177, -234)
 [node name="Zombie_White" parent="Enemies" instance=ExtResource("9_dgx21")]
 position = Vector2(110, -75)
 
-[node name="Zombie_White7" parent="Enemies" instance=ExtResource("9_dgx21")]
-position = Vector2(-151, -75)
-
 [node name="Zombie_White2" parent="Enemies" instance=ExtResource("9_dgx21")]
 position = Vector2(378, -251)
 
@@ -1220,6 +1223,18 @@ position = Vector2(995, -219)
 
 [node name="Zombie_Blue3" parent="Enemies" instance=ExtResource("10_xb1w4")]
 position = Vector2(657, -74)
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="LevelLabel" type="Label" parent="Labels"]
+z_index = 1
+offset_left = -254.0
+offset_top = -189.0
+offset_right = -150.0
+offset_bottom = -166.0
+text = "Level 2"
+label_settings = SubResource("LabelSettings_vmere")
+uppercase = true
 
 [node name="NextLevel" parent="." instance=ExtResource("11_r42sq")]
 z_index = 1
