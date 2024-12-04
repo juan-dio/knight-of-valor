@@ -189,6 +189,7 @@ _data = {
 }
 
 [node name="Devil_Horn" type="Node2D"]
+z_index = 1
 script = ExtResource("1_80o6h")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

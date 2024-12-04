@@ -189,6 +189,7 @@ _data = {
 }
 
 [node name="Slime_Purple" type="Node2D"]
+z_index = 1
 script = ExtResource("1_6wsko")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

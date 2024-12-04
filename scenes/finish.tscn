@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cnf6ncuqwq2k5"]
+[gd_scene load_steps=10 format=3 uid="uid://cnf6ncuqwq2k5"]
 
 [ext_resource type="Script" path="res://scripts/finish.gd" id="1_066l6"]
 [ext_resource type="Texture2D" uid="uid://dg645i4wpm0mu" path="res://assets/sprites/tileset1.png" id="2_4eu2o"]
+[ext_resource type="AudioStream" uid="uid://csu5jeynfjh06" path="res://assets/sounds/win.wav" id="3_cm263"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ljsse"]
 atlas = ExtResource("2_4eu2o")
@@ -55,8 +56,11 @@ flip_h = true
 position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_r7663")
 
+[node name="WinSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_cm263")
+bus = &"SFX"
+
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.75
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

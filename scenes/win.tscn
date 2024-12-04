@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://1id0whqsgyjt"]
+[gd_scene load_steps=30 format=4 uid="uid://1id0whqsgyjt"]
 
 [ext_resource type="Script" path="res://scripts/win.gd" id="1_yu34k"]
 [ext_resource type="Texture2D" uid="uid://btfuycq8lr7sm" path="res://assets/sprites/bg.png" id="2_txkab"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dg645i4wpm0mu" path="res://assets/sprites/tileset1.png" id="5_k0dh7"]
 [ext_resource type="Script" path="res://scripts/score.gd" id="6_sq1ik"]
 [ext_resource type="PackedScene" uid="uid://cnrrv6vbbgsgk" path="res://scenes/music_menu.tscn" id="7_8ghqq"]
+[ext_resource type="AudioStream" uid="uid://cys1kjjftpveo" path="res://assets/sounds/victory.wav" id="7_snk6m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mi8f3"]
 texture = ExtResource("2_txkab")
@@ -980,6 +981,10 @@ scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_lg1cf")
 autoplay = "default"
 flip_h = true
+
+[node name="VictorySound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_snk6m")
+bus = &"SFX"
 
 [node name="MusicMenu" parent="." instance=ExtResource("7_8ghqq")]
 

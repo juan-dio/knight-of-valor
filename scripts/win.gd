@@ -1,10 +1,11 @@
 extends Control
 
 @onready var exit_button: Button = $VBoxContainer/ExitButton
+@onready var victory_sound: AudioStreamPlayer2D = $VictorySound
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	victory_sound.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

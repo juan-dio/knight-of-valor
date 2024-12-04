@@ -189,6 +189,7 @@ _data = {
 }
 
 [node name="Zombie_White" type="Node2D"]
+z_index = 1
 script = ExtResource("1_bd7ot")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

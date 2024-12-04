@@ -188,6 +188,7 @@ _data = {
 }
 
 [node name="Ghost_King" type="Node2D"]
+z_index = 1
 script = ExtResource("1_jl26x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

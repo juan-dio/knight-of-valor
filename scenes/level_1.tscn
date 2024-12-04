@@ -1149,31 +1149,24 @@ position = Vector2(1317, -284)
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Slime_Green" parent="Enemies" instance=ExtResource("3_1r0f8")]
-z_index = 1
 position = Vector2(439, -89)
 
 [node name="Slime_Green2" parent="Enemies" instance=ExtResource("3_1r0f8")]
-z_index = 1
 position = Vector2(929, -89)
 
 [node name="Slime_Green3" parent="Enemies" instance=ExtResource("3_1r0f8")]
-z_index = 1
 position = Vector2(1034, -89)
 
 [node name="Slime_Green4" parent="Enemies" instance=ExtResource("3_1r0f8")]
-z_index = 1
 position = Vector2(1269, -153)
 
 [node name="Slime_Green5" parent="Enemies" instance=ExtResource("3_1r0f8")]
-z_index = 1
 position = Vector2(1458, -153)
 
 [node name="Slime_Green6" parent="Enemies" instance=ExtResource("3_1r0f8")]
-z_index = 1
 position = Vector2(1591, -121)
 
 [node name="Slime_Green7" parent="Enemies" instance=ExtResource("3_1r0f8")]
-z_index = 1
 position = Vector2(1736, -121)
 
 [node name="Slime_Purple" parent="Enemies" instance=ExtResource("10_pji8h")]
