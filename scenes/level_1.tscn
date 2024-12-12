@@ -13,7 +13,7 @@
 [ext_resource type="FontFile" uid="uid://bybfoqcmp56uc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="11_1pder"]
 [ext_resource type="PackedScene" uid="uid://gu1qqib25pbu" path="res://scenes/next_level.tscn" id="12_8qpjt"]
 [ext_resource type="PackedScene" uid="uid://bcynflyjeq5r1" path="res://scenes/hud.tscn" id="12_ej1hp"]
-[ext_resource type="FontFile" uid="uid://dbslkvb3cxdrj" path="res://assets/fonts/PixelOperator8.ttf" id="13_a30my"]
+[ext_resource type="PackedScene" uid="uid://cn65xc86yg3ne" path="res://scenes/potion.tscn" id="12_prqtr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wfykn"]
 texture = ExtResource("1_cl6py")
@@ -1182,46 +1182,16 @@ position = Vector2(1652, -121)
 
 [node name="LevelLabel" type="Label" parent="Labels"]
 z_index = 1
-offset_left = -254.0
-offset_top = -189.0
-offset_right = -150.0
-offset_bottom = -166.0
+offset_left = -146.0
+offset_top = -182.0
+offset_right = -42.0
+offset_bottom = -159.0
 text = "Level 1"
 label_settings = SubResource("LabelSettings_23xex")
 uppercase = true
 
-[node name="Label" type="Label" parent="Labels"]
-z_index = 1
-offset_left = -256.0
-offset_top = -165.0
-offset_right = -6.0
-offset_bottom = -129.0
-theme_override_fonts/font = ExtResource("13_a30my")
-theme_override_font_sizes/font_size = 8
-text = "Knight diperintahkan raja untuk menyelamatkan putri dengan melewati berbagai rintangan."
-autowrap_mode = 2
-
-[node name="Label2" type="Label" parent="Labels"]
-z_index = 1
-offset_left = -61.0
-offset_top = -97.0
-offset_right = 119.0
-offset_bottom = -81.0
-theme_override_fonts/font = ExtResource("13_a30my")
-theme_override_font_sizes/font_size = 8
-text = "use arrow button to move"
-autowrap_mode = 2
-
-[node name="Label3" type="Label" parent="Labels"]
-z_index = 1
-offset_left = 115.0
-offset_top = -130.0
-offset_right = 295.0
-offset_bottom = -114.0
-theme_override_fonts/font = ExtResource("13_a30my")
-theme_override_font_sizes/font_size = 8
-text = "use space button to jump"
-autowrap_mode = 2
+[node name="Potion" parent="." instance=ExtResource("12_prqtr")]
+position = Vector2(36, -94)
 
 [node name="NextLevel" parent="." instance=ExtResource("12_8qpjt")]
 z_index = 1

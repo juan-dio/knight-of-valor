@@ -11,3 +11,17 @@ func add_coin():
 	
 func add_chest():
 	score += 5
+
+func add_health():
+	health += 1
+	
+func reduce_coin():
+	score -= 20
+
+func drink_potion():
+	if health < max_health and score >= 20:
+		reduce_coin()
+		add_health()
+		return true
+	else:
+		return false
