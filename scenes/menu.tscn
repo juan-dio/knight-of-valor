@@ -936,9 +936,9 @@ sprite_frames = SubResource("SpriteFrames_katuk")
 autoplay = "default"
 
 [node name="MusicMenu" parent="." instance=ExtResource("7_ki7ce")]
-bus = &"Master"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/InstructionButton" to="." method="_on_instruction_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/SettingButton" to="." method="_on_setting_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
