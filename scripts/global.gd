@@ -5,8 +5,8 @@ var position = 0
 var fall = false
 var freeze = false
 var max_health = 3
-var health = 2
-var score = 20
+var health = max_health
+var score = 0
 
 func add_coin():
 	score += 1
