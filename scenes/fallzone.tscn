@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ceggdr7vl6iwj"]
 
 [ext_resource type="Script" path="res://scripts/fallzone.gd" id="1_xg38j"]
-[ext_resource type="AudioStream" uid="uid://d3dija04djtjx" path="res://assets/sounds/Dive.wav" id="2_j8rg8"]
+[ext_resource type="AudioStream" uid="uid://d3dija04djtjx" path="res://assets/sounds/dive.wav" id="2_j8rg8"]
 
 [node name="Fallzone" type="Area2D"]
 collision_mask = 2

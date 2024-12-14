@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cy381c2g32142"]
 
 [ext_resource type="Script" path="res://scripts/killzone.gd" id="1_awomc"]
-[ext_resource type="AudioStream" uid="uid://d3dija04djtjx" path="res://assets/sounds/Dive.wav" id="2_afnte"]
+[ext_resource type="AudioStream" uid="uid://d3dija04djtjx" path="res://assets/sounds/dive.wav" id="2_afnte"]
 
 [node name="Killzone" type="Area2D"]
 collision_mask = 2

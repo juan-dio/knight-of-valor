@@ -5,7 +5,7 @@
 [ext_resource type="Shader" uid="uid://kq3j802fuu17" path="res://assets/shaders/hit_flash.tres" id="2_bpum7"]
 [ext_resource type="Texture2D" uid="uid://dg645i4wpm0mu" path="res://assets/sprites/tileset1.png" id="4_52ctc"]
 [ext_resource type="AudioStream" uid="uid://ccjv4ij37u27q" path="res://assets/sounds/jump.wav" id="5_8evng"]
-[ext_resource type="AudioStream" uid="uid://cw0krbiaddfdh" path="res://assets/sounds/Hit.wav" id="6_4yukq"]
+[ext_resource type="AudioStream" uid="uid://cw0krbiaddfdh" path="res://assets/sounds/hit.wav" id="6_4yukq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_viqrb"]
 shader = ExtResource("2_bpum7")
