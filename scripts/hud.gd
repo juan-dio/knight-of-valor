@@ -1,9 +1,8 @@
 extends CanvasLayer
 
-@onready var health_1: AnimatedSprite2D = $GridContainer/HBoxContainer/Health1
-@onready var health_2: AnimatedSprite2D = $GridContainer/HBoxContainer/Health2
-@onready var health_3: AnimatedSprite2D = $GridContainer/HBoxContainer/Health3
-
+@onready var health_1: AnimatedSprite2D = $HBoxContainer/HBoxContainer/Health1
+@onready var health_2: AnimatedSprite2D = $HBoxContainer/HBoxContainer/Health2
+@onready var health_3: AnimatedSprite2D = $HBoxContainer/HBoxContainer/Health3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

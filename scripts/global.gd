@@ -1,6 +1,8 @@
 extends Node
 
 var current_scene = "res://scenes/level_1.tscn"
+var position = 0
+var fall = false
 var freeze = false
 var max_health = 3
 var health = max_health

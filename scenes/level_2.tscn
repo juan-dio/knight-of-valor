@@ -1,6 +1,7 @@
-[gd_scene load_steps=31 format=4 uid="uid://bhha6vlepuqcr"]
+[gd_scene load_steps=32 format=4 uid="uid://bhha6vlepuqcr"]
 
 [ext_resource type="PackedScene" uid="uid://bcynflyjeq5r1" path="res://scenes/hud.tscn" id="1_6ctkl"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_sxtcm"]
 [ext_resource type="Texture2D" uid="uid://btfuycq8lr7sm" path="res://assets/sprites/bg.png" id="2_1aksc"]
 [ext_resource type="Texture2D" uid="uid://dg645i4wpm0mu" path="res://assets/sprites/tileset1.png" id="3_5ju2u"]
 [ext_resource type="PackedScene" uid="uid://cwab0dy3qlgnb" path="res://scenes/player.tscn" id="4_u6803"]
@@ -1018,6 +1019,7 @@ outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Level_2" type="Node2D"]
+script = ExtResource("1_sxtcm")
 
 [node name="HUD" parent="." instance=ExtResource("1_6ctkl")]
 
@@ -1040,7 +1042,7 @@ tile_set = SubResource("TileSet_ldnrf")
 
 [node name="Player" parent="." instance=ExtResource("4_u6803")]
 z_index = 10
-position = Vector2(-217, -143)
+position = Vector2(-205, -189)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-1, -30)

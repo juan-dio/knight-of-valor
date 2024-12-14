@@ -83,49 +83,44 @@ animations = [{
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_svmyq")
 
-[node name="GridContainer" type="GridContainer" parent="."]
-anchors_preset = 15
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
+offset_bottom = 120.0
 grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-columns = 9
 
-[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(320, 0)
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
 
-[node name="Health1" type="AnimatedSprite2D" parent="GridContainer/HBoxContainer"]
+[node name="Health1" type="AnimatedSprite2D" parent="HBoxContainer/HBoxContainer"]
 position = Vector2(90, 65)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_y3nvi")
 animation = &"empty"
 
-[node name="Health2" type="AnimatedSprite2D" parent="GridContainer/HBoxContainer"]
+[node name="Health2" type="AnimatedSprite2D" parent="HBoxContainer/HBoxContainer"]
 position = Vector2(160, 65)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_y3nvi")
 animation = &"empty"
 
-[node name="Health3" type="AnimatedSprite2D" parent="GridContainer/HBoxContainer"]
+[node name="Health3" type="AnimatedSprite2D" parent="HBoxContainer/HBoxContainer"]
 position = Vector2(230, 65)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_y3nvi")
 animation = &"empty"
 
-[node name="Score" type="Node" parent="GridContainer"]
+[node name="Score" type="Node" parent="HBoxContainer"]
 
-[node name="Coin" type="AnimatedSprite2D" parent="GridContainer/Score"]
+[node name="Coin" type="AnimatedSprite2D" parent="HBoxContainer/Score"]
 position = Vector2(941, 65)
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_hqqvs")
 autoplay = "default"
 frame_progress = 0.932715
 
-[node name="Label" type="Label" parent="GridContainer/Score"]
+[node name="Label" type="Label" parent="HBoxContainer/Score"]
 offset_left = 763.0
 offset_top = 52.0
 offset_right = 899.0
