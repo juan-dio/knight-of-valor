@@ -1,8 +1,12 @@
 extends Control
 
+@onready var start_button: Button = $VBoxContainer/StartButton
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#start_button.grab_focus()
 	Global.current_scene = "res://scenes/level_1.tscn"
+	Global.pause = false
 	Global.health = Global.max_health
 	Global.score = 0
 

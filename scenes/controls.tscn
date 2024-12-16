@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cys0dogvsj3s7"]
+[gd_scene load_steps=13 format=4 uid="uid://cys0dogvsj3s7"]
 
 [ext_resource type="Script" path="res://scripts/controls.gd" id="1_6yl1h"]
 [ext_resource type="Texture2D" uid="uid://btfuycq8lr7sm" path="res://assets/sprites/bg.png" id="1_mtbxw"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cnrrv6vbbgsgk" path="res://scenes/music_menu.tscn" id="5_a0suf"]
 [ext_resource type="Texture2D" uid="uid://doa4bpmg1whaf" path="res://assets/sprites/arrow-key-right.png" id="5_wsa1j"]
 [ext_resource type="Texture2D" uid="uid://dit1xbnvdglw8" path="res://assets/sprites/spacebar.png" id="6_yg4vu"]
+[ext_resource type="Texture2D" uid="uid://yn4sjtjy2n1x" path="res://assets/sprites/esc.png" id="8_w5434"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4gymq"]
 texture = ExtResource("1_mtbxw")
@@ -146,44 +147,76 @@ uppercase = true
 
 [node name="ArrowKeyLeft" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(170, 246.25)
-scale = Vector2(0.5, 0.5)
+position = Vector2(228, 213.25)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("4_j51ci")
 
 [node name="ArrowKeyRight" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(280, 246.25)
-scale = Vector2(0.5, 0.5)
+position = Vector2(317, 213.25)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("5_wsa1j")
 
 [node name="ArrowLabel" type="Label" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = 404.5
-offset_top = 211.25
-offset_right = 1017.5
-offset_bottom = 300.25
+offset_left = 418.0
+offset_top = 178.0
+offset_right = 918.0
+offset_bottom = 267.0
 theme_override_fonts/font = ExtResource("3_b5nge")
-theme_override_font_sizes/font_size = 32
-text = "Gunakan tombol panah untuk bergerak"
+theme_override_font_sizes/font_size = 24
+text = "Tekan tombol panah untuk bergerak"
 autowrap_mode = 2
 
 [node name="SpaceKey" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(228.5, 403.25)
-scale = Vector2(0.5, 0.5)
+position = Vector2(273.5, 321.25)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("6_yg4vu")
 
 [node name="SpaceLabel" type="Label" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = 404.5
-offset_top = 366.25
-offset_right = 1017.5
-offset_bottom = 455.25
+offset_left = 418.0
+offset_top = 288.0
+offset_right = 918.0
+offset_bottom = 377.0
 theme_override_fonts/font = ExtResource("3_b5nge")
-theme_override_font_sizes/font_size = 32
-text = "Gunakan tombol spasi untuk melompat"
+theme_override_font_sizes/font_size = 24
+text = "Tekan tombol spasi untuk melompat"
+autowrap_mode = 2
+
+[node name="EscKey" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(272, 431)
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_w5434")
+
+[node name="EscLabel" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 418.0
+offset_top = 397.0
+offset_right = 918.0
+offset_bottom = 486.0
+theme_override_fonts/font = ExtResource("3_b5nge")
+theme_override_font_sizes/font_size = 24
+text = "Tekan tombol escape untuk pause"
+autowrap_mode = 2
+
+[node name="EscButton" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 248.0
+offset_top = 423.0
+offset_right = 293.0
+offset_bottom = 439.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_05uew")
+theme_override_font_sizes/font_size = 16
+text = "Esc"
 autowrap_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]

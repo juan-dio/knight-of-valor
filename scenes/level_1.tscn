@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://dh0vq2fk73gko"]
+[gd_scene load_steps=31 format=4 uid="uid://dh0vq2fk73gko"]
 
 [ext_resource type="Texture2D" uid="uid://btfuycq8lr7sm" path="res://assets/sprites/bg.png" id="1_cl6py"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_cocg4"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://gu1qqib25pbu" path="res://scenes/next_level.tscn" id="12_8qpjt"]
 [ext_resource type="PackedScene" uid="uid://bcynflyjeq5r1" path="res://scenes/hud.tscn" id="12_ej1hp"]
 [ext_resource type="PackedScene" uid="uid://cn65xc86yg3ne" path="res://scenes/potion.tscn" id="12_prqtr"]
+[ext_resource type="PackedScene" uid="uid://cxml5xqdhk1x3" path="res://scenes/pause_menu.tscn" id="16_6qjrb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wfykn"]
 texture = ExtResource("1_cl6py")
@@ -985,6 +986,8 @@ outline_color = Color(0, 0, 0, 1)
 script = ExtResource("1_cocg4")
 
 [node name="HUD" parent="." instance=ExtResource("12_ej1hp")]
+
+[node name="PauseMenu" parent="HUD" instance=ExtResource("16_6qjrb")]
 
 [node name="Tilemap" type="Node" parent="."]
 

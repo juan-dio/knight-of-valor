@@ -1,9 +1,10 @@
-[gd_scene load_steps=35 format=4 uid="uid://cubqdmd7tga85"]
+[gd_scene load_steps=36 format=4 uid="uid://cubqdmd7tga85"]
 
 [ext_resource type="PackedScene" uid="uid://bcynflyjeq5r1" path="res://scenes/hud.tscn" id="1_d6f2t"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_e6k50"]
 [ext_resource type="Texture2D" uid="uid://btfuycq8lr7sm" path="res://assets/sprites/bg.png" id="2_phl1s"]
 [ext_resource type="Texture2D" uid="uid://dg645i4wpm0mu" path="res://assets/sprites/tileset1.png" id="3_odnyw"]
+[ext_resource type="PackedScene" uid="uid://cxml5xqdhk1x3" path="res://scenes/pause_menu.tscn" id="3_qwge8"]
 [ext_resource type="Texture2D" uid="uid://c50q8yg8mrriv" path="res://assets/sprites/tileset3.png" id="4_raqfn"]
 [ext_resource type="PackedScene" uid="uid://cwab0dy3qlgnb" path="res://scenes/player.tscn" id="5_2wce1"]
 [ext_resource type="Texture2D" uid="uid://dfhpqq26kox42" path="res://assets/sprites/tileset5.png" id="5_d5tej"]
@@ -1150,7 +1151,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_knuh3"]
 resource_name = "move"
-length = 2.0
+length = 2.5
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1159,7 +1160,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
+"times": PackedFloat32Array(0, 2.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(537, -73), Vector2(537, -265)]
@@ -1188,7 +1189,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_u0h5h"]
 resource_name = "move"
-length = 1.5
+length = 2.5
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1197,7 +1198,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 2.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1432, -69), Vector2(1432, -188)]
@@ -1218,6 +1219,8 @@ outline_color = Color(0, 0, 0, 1)
 script = ExtResource("1_e6k50")
 
 [node name="HUD" parent="." instance=ExtResource("1_d6f2t")]
+
+[node name="PauseMenu" parent="HUD" instance=ExtResource("3_qwge8")]
 
 [node name="Tilemap" type="Node" parent="."]
 

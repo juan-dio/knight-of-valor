@@ -893,6 +893,7 @@ theme_override_constants/separation = 8
 layout_mode = 2
 size_flags_vertical = 3
 focus_neighbor_top = NodePath("../QuitButton")
+focus_neighbor_bottom = NodePath("../InstructionButton")
 theme_override_fonts/font = ExtResource("3_nuwc7")
 theme_override_font_sizes/font_size = 24
 text = "Play"
@@ -900,7 +901,8 @@ text = "Play"
 [node name="InstructionButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-focus_neighbor_top = NodePath("../QuitButton")
+focus_neighbor_top = NodePath("../StartButton")
+focus_neighbor_bottom = NodePath("../SettingButton")
 theme_override_fonts/font = ExtResource("3_nuwc7")
 theme_override_font_sizes/font_size = 24
 text = "Instruction"
@@ -908,7 +910,8 @@ text = "Instruction"
 [node name="SettingButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-focus_neighbor_top = NodePath("../QuitButton")
+focus_neighbor_top = NodePath("../InstructionButton")
+focus_neighbor_bottom = NodePath("../CreditsButton")
 theme_override_fonts/font = ExtResource("3_nuwc7")
 theme_override_font_sizes/font_size = 24
 text = "Setting"
@@ -916,7 +919,8 @@ text = "Setting"
 [node name="CreditsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-focus_neighbor_top = NodePath("../QuitButton")
+focus_neighbor_top = NodePath("../SettingButton")
+focus_neighbor_bottom = NodePath("../QuitButton")
 theme_override_fonts/font = ExtResource("3_nuwc7")
 theme_override_font_sizes/font_size = 24
 text = "Credits"
@@ -924,6 +928,7 @@ text = "Credits"
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+focus_neighbor_top = NodePath("../CreditsButton")
 focus_neighbor_bottom = NodePath("../StartButton")
 theme_override_fonts/font = ExtResource("3_nuwc7")
 theme_override_font_sizes/font_size = 24

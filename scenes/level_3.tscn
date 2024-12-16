@@ -1,9 +1,10 @@
-[gd_scene load_steps=30 format=4 uid="uid://cfiqfsjwtnrmo"]
+[gd_scene load_steps=31 format=4 uid="uid://cfiqfsjwtnrmo"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_p7gii"]
 [ext_resource type="PackedScene" uid="uid://bcynflyjeq5r1" path="res://scenes/hud.tscn" id="1_tpubm"]
 [ext_resource type="Texture2D" uid="uid://btfuycq8lr7sm" path="res://assets/sprites/bg.png" id="2_gyq8k"]
 [ext_resource type="Texture2D" uid="uid://c50q8yg8mrriv" path="res://assets/sprites/tileset3.png" id="3_hifcu"]
+[ext_resource type="PackedScene" uid="uid://cxml5xqdhk1x3" path="res://scenes/pause_menu.tscn" id="3_j58cu"]
 [ext_resource type="Texture2D" uid="uid://dg645i4wpm0mu" path="res://assets/sprites/tileset1.png" id="3_up6s6"]
 [ext_resource type="PackedScene" uid="uid://cwab0dy3qlgnb" path="res://scenes/player.tscn" id="4_gtv45"]
 [ext_resource type="PackedScene" uid="uid://gu1qqib25pbu" path="res://scenes/next_level.tscn" id="5_bjcxx"]
@@ -1060,6 +1061,8 @@ outline_color = Color(0, 0, 0, 1)
 script = ExtResource("1_p7gii")
 
 [node name="HUD" parent="." instance=ExtResource("1_tpubm")]
+
+[node name="PauseMenu" parent="HUD" instance=ExtResource("3_j58cu")]
 
 [node name="Tilemap" type="Node" parent="."]
 
